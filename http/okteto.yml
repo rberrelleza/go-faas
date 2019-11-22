@@ -22,7 +22,7 @@ securityContext:
     - SYS_PTRACE
 environment:
   # overrides the one set by openfaas, enabling hot reload
-  - fprocess="go run /home/app/handler/main.go" 
+  - fprocess=go run /home/app/handler/main.go
 forward:
 - 8080:8080
 - 2345:2345
