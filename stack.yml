@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://openfaas-ingress-openfaas-rberrelleza.cloud.okteto.net
+functions:
+  http:
+    lang: golang-http
+    handler: ./http
+    image: ramiro/http:latest
+  
+  middleware:
+    lang: golang-middleware
+    handler: ./middleware
+    image: ramiro/middleware:latest
+
